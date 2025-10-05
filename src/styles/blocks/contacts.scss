@@ -1,0 +1,220 @@
+.contacts {
+  margin-bottom: 164px;
+
+  @include on-tablet {
+    margin-bottom: 102px;
+  }
+
+  @include on-mobile {
+    margin-bottom: 120px;
+  }
+
+  &__section-title {
+    margin-top: 0;
+    margin-bottom: 48px;
+
+    font-family: Poppins, sans-serif;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 48px;
+    line-height: 100%;
+    letter-spacing: -1.5px;
+    text-align: center;
+
+    @include on-tablet {
+      font-weight: 500;
+      font-style: Medium;
+    }
+
+    @include on-mobile {
+      font-weight: 500;
+      font-style: Medium;
+      font-size: 32px;
+      line-height: 32px;
+    }
+  }
+
+  &__wrapper {
+    margin-top: 48px;
+
+    @include page-grid;
+
+    row-gap: 24px;
+  }
+
+  &__form {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+
+    grid-column: span 7;
+
+    @include on-tablet {
+      grid-column: span 3;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include on-mobile {
+      grid-column: span 2;
+      grid-template-columns: repeat(2, 1fr);
+      margin-bottom: 24px; /* +24px raw gap grid = 48px */
+    }
+  }
+
+  &__name {
+    font-family: Poppins, sans-serif;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0;
+
+    grid-column: span 5;
+
+    margin-bottom: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    height: 48;
+    border-radius: 40px;
+    background-color: #f8f8fa;
+    padding: 14px 16px;
+  }
+
+  &__email {
+    font-family: Poppins, sans-serif;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0;
+
+    grid-column: span 5;
+
+    margin-bottom: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    height: 48;
+    border-radius: 40px;
+    background-color: #f8f8fa;
+    padding: 14px 16px;
+  }
+
+  &__message {
+    font-family: Poppins, sans-serif;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0;
+
+    grid-column: span 5;
+    resize: none;
+
+    margin-bottom: 32px;
+    width: 100%;
+    box-sizing: border-box;
+    height: 148px;
+    border-radius: 16px;
+    background-color: #f8f8fa;
+    padding: 14px 16px;
+    gap: 10px;
+  }
+
+  &__button {
+    font-family: Poppins, sans-serif;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 16px;
+    line-height: 27px;
+    letter-spacing: 0;
+    text-align: center;
+    color: #1d1d1d;
+
+    grid-column: span 5;
+
+    width: 100%;
+    padding: 0 48px;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    height: 56px;
+    border-radius: 40px;
+    background-color: #fff;
+    transition: filter 0.3s ease;
+  }
+
+  &__name,
+  &__email,
+  &__message,
+  &__button {
+    display: grid;
+
+    @include on-tablet {
+      grid-column: span 3;
+    }
+
+    @include on-mobile {
+      width: 100%;
+      grid-column: span 2;
+    }
+  }
+
+  &__name:hover,
+  &__email:hover,
+  &__message:hover {
+    box-shadow: 0 0 10px rgba(229, 44, 16, 0.92);
+    outline: none;
+  }
+
+  &__name:active,
+  &__email:active,
+  &__message:active {
+    box-shadow: 0 0 25px rgba(229, 44, 16, 0.92);
+  }
+
+  &__button:hover {
+    filter: brightness(2);
+  }
+
+  &__button:active {
+    filter: brightness(2.5);
+  }
+
+  &__info {
+    margin: 0;
+    grid-column: span 5;
+
+    @include onTablet {
+      grid-column: span 3;
+    }
+
+    @include onMobile {
+      grid-column: span 2;
+    }
+  }
+
+  &__info-title {
+    margin: 0;
+
+    font-family: Poppins, sans-serif;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 14px;
+    line-height: 140%;
+    letter-spacing: 0;
+  }
+
+  &__info-address {
+    margin-bottom: 0;
+  }
+
+  &__info-phone,
+  &__info-email,
+  &__info-address {
+    font-family: Poppins, sans-serif;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: 0;
+  }
+}

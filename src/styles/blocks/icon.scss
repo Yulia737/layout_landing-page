@@ -2,29 +2,36 @@
   display: block;
   height: 32px;
   width: 32px;
+  cursor: default;
 
-  @include onTablet {
-   height: 32px;
-   width: 32px;
+  @include on-tablet {
+    height: 32px;
+    width: 32px;
   }
 
-  @include onMobile {
-   height: 24px;
-   width: 24px;
+  @include on-mobile {
+    height: 24px;
+    width: 24px;
   }
 
-   &--phone {
+  &--phone {
     background-image: url(../images/icons/icon-phone-call.png);
     background-repeat: no-repeat;
-   }
+    block-size: contain;
+    transition: transform 0.3s ease;
 
-   &--menu {
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &--menu {
     background-image: url(../images/icons/icon-burger-menu.png);
     background-repeat: no-repeat;
-   }
+  }
 
-   &--close {
-  background-image: url(../images/icons/icon-close.png);
-  background-repeat: no-repeat;
-}
+  &--close {
+    background-image: url(../images/icons/icon-close.png);
+    background-repeat: no-repeat;
+  }
 }
