@@ -12,45 +12,46 @@
   @include page-grid;
 
   &__title {
+    grid-column: span 5;
+
     font-family: Poppins, sans-serif;
-    font-weight: 500;
     font-size: 64px;
+    font-weight: 500;
     line-height: 100%;
     letter-spacing: -1.5px;
 
-    grid-column: span 5;
-
     @include on-tablet {
-      font-size: 48px;
       grid-column: 1 / 4;
+      font-size: 48px;
     }
 
     @include on-mobile {
+      grid-column: 1 / -1;
       margin-bottom: 32px;
       font-size: 32px;
-      grid-column: 1 / -1;
     }
   }
 
   &__description {
+    grid-column: span 6;
+
     margin: 0;
-    font-weight: 500;
+
     font-size: 23px;
+    font-weight: 500;
     line-height: 140%;
     letter-spacing: 0;
 
-    grid-column: span 6;
-
     @include on-tablet {
       grid-column: 4 / 7;
-      white-space: normal;
       word-break: break-word;
+      white-space: normal;
     }
 
     @include on-mobile {
       grid-column: 1 / -1;
-      white-space: normal;
       word-break: break-word;
+      white-space: normal;
     }
   }
 }

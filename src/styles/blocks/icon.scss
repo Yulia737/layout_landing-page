@@ -1,23 +1,23 @@
 .icon {
-  display: block;
-  height: 32px;
-  width: 32px;
   cursor: default;
+  display: block;
+  width: 32px;
+  height: 32px;
 
   @include on-tablet {
-    height: 32px;
     width: 32px;
+    height: 32px;
   }
 
   @include on-mobile {
-    height: 24px;
     width: 24px;
+    height: 24px;
   }
 
   &--phone {
+    block-size: contain;
     background-image: url(../images/icons/icon-phone-call.png);
     background-repeat: no-repeat;
-    block-size: contain;
     transition: transform 0.3s ease;
 
     &:hover {

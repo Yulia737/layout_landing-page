@@ -1,14 +1,12 @@
 .footer {
+  aspect-ratio: $footer-desktop-width / $footer-desktop-height;
   width: 100%;
 
   opacity: 1;
-
-  aspect-ratio: $footer-desktop-width / $footer-desktop-height;
-
   background-image: url(/src/images/footer-image.png);
   background-repeat: no-repeat;
-  background-size: cover;
   background-position: center;
+  background-size: cover;
 
   @include on-tablet {
     aspect-ratio: $footer-tablet-width / $footer-tablet-height;

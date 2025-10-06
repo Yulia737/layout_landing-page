@@ -1,13 +1,15 @@
 .page {
-  max-width: 100vw;
+  scroll-behavior: smooth;
+
   width: 100%;
+  max-width: 100vw;
+
   font-family: Poppins, sans-serif;
-  color: #fff;
   font-size: 16px;
   line-height: 140%;
-  background-color: #1d1d1d;
+  color: #fff;
 
-  scroll-behavior: smooth;
+  background-color: #1d1d1d;
 }
 
 .page__body {
@@ -15,11 +17,12 @@
 }
 
 .page__menu {
+  pointer-events: none;
+
   position: fixed;
   top: 0;
-  left: 0;
   right: 0;
+  left: 0;
 
   opacity: 0;
-  pointer-events: none;
 }
