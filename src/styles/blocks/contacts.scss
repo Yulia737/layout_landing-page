@@ -42,6 +42,7 @@
     display: grid;
     grid-column: span 7;
     grid-template-columns: repeat(7, 1fr);
+    outline: none;
 
     @include on-tablet {
       grid-column: span 3;
@@ -52,6 +53,10 @@
       grid-column: span 2;
       grid-template-columns: repeat(2, 1fr);
       margin-bottom: 24px; /* +24px raw gap grid = 48px */
+    }
+
+    &__form:focus {
+      outline: none;
     }
   }
 
@@ -155,11 +160,28 @@
     }
   }
 
+  &__name,
+  &__email,
+  &__message {
+    &:-webkit-autofill {
+      box-shadow: 0 0 0 1000px #f8f8f8 inset !important;
+
+      -webkit-text-fill-color: #000 !important;
+    }
+  }
+
   &__name:hover,
   &__email:hover,
   &__message:hover {
     outline: none;
     box-shadow: 0 0 10px rgba(229, 44, 16, 0.92);
+  }
+
+  &__name:focus,
+  &__email:focus,
+  &__message:focus {
+    border: none;
+    outline: none;
   }
 
   &__name:active,
@@ -195,6 +217,7 @@
     font-family: Poppins, sans-serif;
     font-size: 14px;
     font-weight: 400;
+    font-style: normal;
     line-height: 140%;
     letter-spacing: 0;
   }
@@ -209,7 +232,16 @@
     font-family: Poppins, sans-serif;
     font-size: 16px;
     font-weight: 500;
+    font-style: normal;
     line-height: 140%;
+    color: #fff;
+    text-decoration: none;
     letter-spacing: 0;
+  }
+
+  &__info-phone,
+  &__info-email {
+    display: inline-block;
+    margin-bottom: 24px;
   }
 }

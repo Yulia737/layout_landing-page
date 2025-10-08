@@ -16,11 +16,12 @@
     color: #1d1d1d;
     text-decoration: none;
     letter-spacing: 2px;
-
-    //  cursor:default;
   }
 
   &__link:hover {
     text-decoration: underline;
+    transition:
+      opacity 0.3s ease,
+      transform 0.3s ease;
   }
 }

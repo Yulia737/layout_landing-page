@@ -341,42 +341,61 @@
       >
         <h2 class="contacts__section-title">Contact us</h2>
         <div class="contacts__wrapper">
-          <div class="contacts__form">
+          <form class="contacts__form">
             <input
               type="text"
               class="contacts__name"
               placeholder="Name"
+              name="name"
+              required
             />
 
             <input
               type="text"
               class="contacts__email"
               placeholder="Email"
+              name="email"
+              required
             />
 
             <textarea
-              name="message"
               class="contacts__message"
               placeholder="Message"
+              name="message"
+              required
             ></textarea>
 
             <button
               class="contacts__button"
-              type="submit"
+              type="reset"
             >
               Send
             </button>
-          </div>
+          </form>
 
           <div class="contacts__info">
             <h4 class="contacts__info-title">Phone</h4>
-            <p class="contacts__info-phone">+1 234 5555-55-55</p>
+            <a
+              class="contacts__info-phone"
+              href="tel:+1 234 5555-55-55"
+            >
+              +1 234 5555-55-55
+            </a>
             <h4 class="contacts__info-title">Email</h4>
-            <p class="contacts__info-email">hello@miami.com</p>
+            <a
+              class="contacts__info-email"
+              href="mailto:hello@miami.com"
+            >
+              hello@miami.com
+            </a>
             <h4 class="contacts__info-title">Address</h4>
-            <p class="contacts__info-address">
-              400 first ave.suite 700 Minneapolis, MN 55401
-            </p>
+            <address class="contacts__info-address">
+              400 first ave.
+              <br />
+              suite 700
+              <br />
+              Minneapolis, MN 55401
+            </address>
           </div>
         </div>
       </section>

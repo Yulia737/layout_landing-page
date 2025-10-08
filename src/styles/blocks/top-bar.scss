@@ -23,6 +23,11 @@
 
   &__logo {
     display: flex;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.3);
+    }
   }
 
   &__phone {
