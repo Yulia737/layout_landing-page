@@ -341,7 +341,10 @@
       >
         <h2 class="contacts__section-title">Contact us</h2>
         <div class="contacts__wrapper">
-          <form class="contacts__form">
+          <form
+            class="contacts__form"
+            onsubmit="this.reset(); return false;"
+          >
             <input
               type="text"
               class="contacts__name"
@@ -367,7 +370,7 @@
 
             <button
               class="contacts__button"
-              type="reset"
+              type="submit"
             >
               Send
             </button>
